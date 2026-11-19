@@ -9,7 +9,6 @@ import {
   Gift,
   Wallet,
   ShoppingBag,
-  CreditCard,
   Globe,
   Smartphone,
   Radio,
@@ -20,8 +19,6 @@ import {
   ShieldCheck,
   Bell,
   ChevronRight,
-  Zap,
-  Menu,
   CircleDollarSign,
   Package,
   Sparkles,
@@ -35,7 +32,7 @@ const navigation = [
   { label: "Gift Cards", href: "/dashboard/gift-cards", icon: Gift },
   { label: "Wallet", href: "/dashboard/wallet", icon: Wallet },
   { label: "Buy Accounts", href: "/dashboard/accounts", icon: Users },
-  { label: "Subscriptions", href: "/dashboard/subscriptions", icon: RefreshIcon },
+  { label: "Subscriptions", href: "/dashboard/subscriptions", icon: ArrowLeftRight },
   { label: "eSIM Services", href: "/dashboard/esim", icon: Globe },
   { label: "Virtual Numbers", href: "/dashboard/numbers", icon: Smartphone },
   { label: "SMM Services", href: "/dashboard/smm", icon: Radio },
@@ -44,10 +41,6 @@ const navigation = [
   { label: "Referrals", href: "/dashboard/referrals", icon: Users },
   { label: "Profile & Settings", href: "/dashboard/profile", icon: Settings },
 ];
-
-function RefreshIcon(props: React.ComponentProps<typeof ArrowLeftRight>) {
-  return <ArrowLeftRight {...props} />;
-}
 
 const services = [
   {
@@ -297,7 +290,7 @@ export default async function DashboardPage() {
                 <Users size={19} />
               </div>
               <strong>0</strong>
-              <span className="cf-stat-caption">People you've invited</span>
+              <span className="cf-stat-caption">People you&apos;ve invited</span>
             </div>
 
             <div className="cf-dash-stat-card">
@@ -317,7 +310,7 @@ export default async function DashboardPage() {
                 <h2>Quick actions</h2>
               </div>
               <Link href="/dashboard/gift-cards">
-                Explore services <ArrowRightIcon />
+                Explore services <ArrowUpRight size={16} />
               </Link>
             </div>
 
@@ -396,8 +389,3 @@ export default async function DashboardPage() {
     </main>
   );
 }
-
-function ArrowRightIcon() {
-  return <ArrowUpRight size={16} />;
-    }
-              
