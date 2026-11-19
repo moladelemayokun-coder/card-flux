@@ -1,30 +1,11 @@
-
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: {
-    default: "CARD FLUX | Where Gift Cards Move",
-    template: "%s | CARD FLUX",
-  },
+  title: "CARD FLUX | Where Gift Cards Move",
   description:
-    "Buy, sell and exchange gift cards seamlessly. Welcome to CARD FLUX, where gift cards move.",
-  applicationName: "CARD FLUX",
-  keywords: [
-    "Card Flux",
-    "Gift Cards",
-    "Buy Gift Cards",
-    "Sell Gift Cards",
-    "Gift Card Exchange",
-    "Digital Marketplace",
-  ],
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#071426",
+    "Buy, sell and exchange gift cards seamlessly with CARD FLUX.",
 };
 
 export default function RootLayout({
@@ -35,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+        >
           {children}
         </ThemeProvider>
       </body>
