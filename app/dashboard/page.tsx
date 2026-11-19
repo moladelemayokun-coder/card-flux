@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import LogoutButton from "@/components/logout-button";
 
 const services = [
   {
@@ -26,6 +27,7 @@ const services = [
 
 export default async function DashboardPage() {
   const supabase = await createClient();
+
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -34,22 +36,28 @@ export default async function DashboardPage() {
     redirect("/login");
   }
 
+  const displayName =
+    user.user_metadata?.full_name ||
+    user.email?.split("@")[0] ||
+    "Customer";
+
   return (
     <main className="dashboard-page">
       <div className="dashboard-container">
         <header className="dashboard-header">
           <div>
             <p className="dashboard-label">CARD FLUX ACCOUNT</p>
-            <h1>Welcome back!</h1>
+            <h1>Welcome, {displayName}!</h1>
             <p className="dashboard-subtitle">
               Your digital exchange experience starts here.
             </p>
           </div>
 
-          <div className="dashboard-avatar">
-            {(user.user_metadata?.full_name || user.email || "U")
-              .charAt(0)
-              .toUpperCase()}
+          <div className="dashboard-actions">
+            <div className="dashboard-avatar">
+              {displayName.charAt(0).toUpperCase()}
+            </div>
+            <LogoutButton />
           </div>
         </header>
 
@@ -58,8 +66,8 @@ export default async function DashboardPage() {
             <p className="dashboard-label">YOUR ACCOUNT</p>
             <h2>Everything you need, in one place.</h2>
             <p>
-              Manage your gift cards and explore digital services from your
-              personal dashboard.
+              Manage your gift cards and explore digital services
+              from your personal dashboard.
             </p>
           </div>
         </section>
@@ -72,8 +80,13 @@ export default async function DashboardPage() {
 
           <div className="dashboard-grid">
             {services.map((service) => (
-              <article className="dashboard-card" key={service.title}>
-                <span className="dashboard-icon">{service.icon}</span>
+              <article
+                className="dashboard-card"
+                key={service.title}
+              >
+                <span className="dashboard-icon">
+                  {service.icon}
+                </span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <span className="dashboard-coming-soon">
