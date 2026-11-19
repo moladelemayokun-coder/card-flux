@@ -952,3 +952,43 @@ button {
     transform: none;
   }
 }
+/* CARD FLUX DASHBOARD ACTIONS */
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logout-button {
+  padding: 11px 18px;
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #10b981;
+  color: #06251c;
+}
+
+.logout-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .dashboard-actions {
+    gap: 9px;
+  }
+
+  .logout-button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
