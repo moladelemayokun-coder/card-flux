@@ -3,310 +3,471 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
-  ShieldCheck,
-  Zap,
-  Globe2,
+  ArrowLeftRight,
   CreditCard,
   Gift,
-  RefreshCw,
+  Globe2,
   Smartphone,
   Wallet,
-  CheckCircle2,
-  TrendingUp,
+  ShieldCheck,
+  Zap,
+  RefreshCw,
+  ShoppingBag,
+  Radio,
+  Users,
   Headphones,
+  CheckCircle2,
+  Sparkles,
+  Menu,
+  Coins,
 } from "lucide-react";
 import { SiteHeader } from "./site-header";
 
 const services = [
   {
     icon: Gift,
-    title: "Buy Gift Cards",
+    title: "Gift Cards",
     description:
-      "Get gift cards from popular global brands through a simple and secure marketplace.",
-    tag: "SHOP CARDS",
-  },
-  {
-    icon: CreditCard,
-    title: "Sell Gift Cards",
-    description:
-      "Turn your unused gift cards into value with a transparent selling process.",
-    tag: "GET PAID",
-  },
-  {
-    icon: RefreshCw,
-    title: "Exchange Gift Cards",
-    description:
-      "Exchange supported gift cards with clear rates and straightforward transactions.",
-    tag: "SWAP VALUE",
-  },
-  {
-    icon: Smartphone,
-    title: "Virtual Numbers",
-    description:
-      "Access legitimate virtual number services from supported providers and regions.",
-    tag: "GO DIGITAL",
+      "Buy, sell and exchange gift cards from popular brands around the world.",
+    tag: "CARD FLUX EXCLUSIVE",
+    href: "/register",
   },
   {
     icon: Wallet,
     title: "Digital Wallet",
     description:
-      "Manage your eligible balances, payments and transaction history in one place.",
-    tag: "YOUR WALLET",
+      "Manage your funds, monitor transactions and enjoy a seamless wallet experience.",
+    tag: "YOUR MONEY, YOUR CONTROL",
+    href: "/register",
   },
   {
     icon: Globe2,
-    title: "Global Marketplace",
+    title: "Global eSIM",
     description:
-      "Explore digital services designed for customers across supported countries.",
-    tag: "GO GLOBAL",
+      "Explore international connectivity solutions for your travels and everyday life.",
+    tag: "STAY CONNECTED",
+    href: "/register",
+  },
+  {
+    icon: Smartphone,
+    title: "Virtual Numbers",
+    description:
+      "Access eligible virtual number and SMS verification services.",
+    tag: "GLOBAL ACCESS",
+    href: "/register",
+  },
+  {
+    icon: ShoppingBag,
+    title: "Digital Marketplace",
+    description:
+      "Discover digital products, subscriptions and other useful services.",
+    tag: "MORE POSSIBILITIES",
+    href: "/register",
+  },
+  {
+    icon: Radio,
+    title: "Social Media Services",
+    description:
+      "Explore social media marketing services from supported providers.",
+    tag: "GROW YOUR PRESENCE",
+    href: "/register",
   },
 ];
 
 const benefits = [
-  "Transparent rates and transaction details",
-  "Secure accounts and protected transactions",
-  "Convenient digital marketplace",
-  "Dedicated customer support",
+  {
+    icon: ShieldCheck,
+    title: "Security comes first",
+    description:
+      "Account protection, secure authentication and carefully designed transaction controls.",
+  },
+  {
+    icon: Zap,
+    title: "Built for speed",
+    description:
+      "A streamlined experience designed to make digital transactions simple.",
+  },
+  {
+    icon: Globe2,
+    title: "A global experience",
+    description:
+      "Explore digital services and supported currencies from one platform.",
+  },
+];
+
+const steps = [
+  {
+    number: "01",
+    title: "Create your account",
+    description:
+      "Register for your CARD FLUX account and complete any required verification.",
+  },
+  {
+    number: "02",
+    title: "Explore the platform",
+    description:
+      "Choose gift cards, wallet services or another available digital product.",
+  },
+  {
+    number: "03",
+    title: "Make your move",
+    description:
+      "Follow the transaction steps and track your activity from your dashboard.",
+  },
 ];
 
 export function HomePage() {
   return (
-    <>
+    <main className="cf-home">
       <SiteHeader />
 
-      <main>
-        <section className="hero-section">
-          <div className="container hero-grid">
-            <div className="hero-content animate-fade-up">
-              <div className="hero-badge">
-                <span className="live-dot" />
-                YOUR DIGITAL VALUE MARKETPLACE
-              </div>
+      <section className="cf-hero">
+        <div className="cf-hero-glow cf-glow-one" />
+        <div className="cf-hero-glow cf-glow-two" />
 
-              <h1>
-                Where Gift Cards
-                <br />
-                <span className="gradient-text">Move Freely.</span>
-              </h1>
-
-              <p className="hero-description">
-                Buy, sell and exchange gift cards with confidence.
-                Discover a smarter way to move digital value with
-                CARD FLUX.
-              </p>
-
-              <div className="hero-actions">
-                <Link href="/register" className="primary-button">
-                  Get Started <ArrowRight size={18} />
-                </Link>
-                <Link href="#services" className="secondary-button">
-                  Explore Services
-                </Link>
-              </div>
-
-              <div className="hero-trust">
-                <span><ShieldCheck size={17} /> Security focused</span>
-                <span><Zap size={17} /> Simple experience</span>
-                <span><Globe2 size={17} /> Global vision</span>
-              </div>
+        <div className="cf-container cf-hero-grid">
+          <div className="cf-hero-content">
+            <div className="cf-eyebrow cf-reveal">
+              <Sparkles size={15} />
+              THE FUTURE OF DIGITAL EXCHANGE
             </div>
 
-            <div className="hero-visual animate-float">
-              <div className="visual-glow" />
+            <h1 className="cf-hero-title cf-reveal cf-delay-1">
+              Your digital world.
+              <br />
+              <span>In constant motion.</span>
+            </h1>
 
-              <div className="flux-card">
-                <div className="flux-card-top">
-                  <span className="flux-logo">C</span>
-                  <span className="flux-card-label">CARD FLUX</span>
-                  <span className="flux-card-status">● ACTIVE</span>
-                </div>
+            <p className="cf-hero-description cf-reveal cf-delay-2">
+              Buy, sell and exchange gift cards. Manage your digital
+              transactions and discover global services, all in one
+              beautifully connected platform.
+            </p>
 
-                <div className="flux-card-middle">
-                  <span>YOUR DIGITAL VALUE</span>
-                  <strong>Moves Without Limits.</strong>
-                </div>
+            <div className="cf-hero-actions cf-reveal cf-delay-3">
+              <Link href="/register" className="cf-button cf-button-primary">
+                Get started
+                <ArrowUpRight size={19} />
+              </Link>
 
-                <div className="flux-card-bottom">
-                  <span>BUY. SELL. EXCHANGE.</span>
-                  <ArrowUpRight size={25} />
-                </div>
-              </div>
-
-              <div className="floating-chip chip-one">
-                <Gift size={19} />
-                <span>Gift Cards</span>
-              </div>
-
-              <div className="floating-chip chip-two">
-                <RefreshCw size={19} />
-                <span>Easy Exchange</span>
-              </div>
-
-              <div className="floating-chip chip-three">
-                <ShieldCheck size={19} />
-                <span>Secure Experience</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="trust-strip">
-          <div className="container trust-strip-inner">
-            <span>BUILT AROUND YOUR DIGITAL LIFE</span>
-            <div><ShieldCheck size={18} /> Security focused</div>
-            <div><Globe2 size={18} /> Global access</div>
-            <div><Zap size={18} /> Simple transactions</div>
-          </div>
-        </section>
-
-        <section className="section-padding services-section" id="services">
-          <div className="container">
-            <div className="section-heading">
-              <span className="eyebrow">THE CARD FLUX ECOSYSTEM</span>
-              <h2>
-                Everything digital.
-                <br />
-                <span className="gradient-text">One destination.</span>
-              </h2>
-              <p>
-                Explore a connected marketplace for gift cards and
-                useful digital services.
-              </p>
-            </div>
-
-            <div className="services-grid">
-              {services.map((service) => {
-                const Icon = service.icon;
-
-                return (
-                  <article className="service-card" key={service.title}>
-                    <div className="service-card-top">
-                      <div className="service-icon">
-                        <Icon size={24} />
-                      </div>
-                      <span>{service.tag}</span>
-                    </div>
-
-                    <h3>{service.title}</h3>
-                    <p>{service.description}</p>
-
-                    <Link href="/register" className="service-link">
-                      Explore service <ArrowUpRight size={17} />
-                    </Link>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-padding about-section" id="about">
-          <div className="container about-grid">
-            <div>
-              <span className="eyebrow">WHY CARD FLUX</span>
-              <h2>
-                Digital value,
-                <br />
-                <span className="gradient-text">made simpler.</span>
-              </h2>
-              <p className="about-description">
-                CARD FLUX is designed to make digital value easier
-                to access, manage and exchange. Our goal is to
-                connect customers with a clear, convenient and
-                secure digital marketplace.
-              </p>
-
-              <Link href="/register" className="primary-button">
-                Join CARD FLUX <ArrowRight size={18} />
+              <Link href="/login" className="cf-button cf-button-secondary">
+                Sign in
+                <ArrowRight size={18} />
               </Link>
             </div>
 
-            <div className="benefits-panel">
-              <div className="benefits-heading">
-                <TrendingUp size={22} />
-                <strong>A better digital experience</strong>
+            <div className="cf-hero-trust cf-reveal cf-delay-4">
+              <span><ShieldCheck size={16} /> Security focused</span>
+              <span><Globe2 size={16} /> Global vision</span>
+              <span><Zap size={16} /> Digital convenience</span>
+            </div>
+          </div>
+
+          <div className="cf-hero-visual cf-reveal cf-delay-2">
+            <div className="cf-orbit cf-orbit-one" />
+            <div className="cf-orbit cf-orbit-two" />
+
+            <div className="cf-floating-card cf-card-main">
+              <div className="cf-card-top">
+                <div className="cf-brand-mark">CF</div>
+                <span className="cf-card-label">CARD FLUX</span>
+                <Sparkles size={19} />
               </div>
 
-              {benefits.map((benefit) => (
-                <div className="benefit-item" key={benefit}>
-                  <CheckCircle2 size={19} />
-                  <span>{benefit}</span>
-                </div>
-              ))}
+              <div className="cf-card-middle">
+                <span>WHERE GIFT CARDS MOVE</span>
+                <h2>One platform.<br />More possibilities.</h2>
+              </div>
 
-              <div className="benefits-footer">
-                <ShieldCheck size={21} />
-                <span>Built with security and transparency in mind.</span>
+              <div className="cf-card-bottom">
+                <span>GLOBAL DIGITAL EXPERIENCE</span>
+                <ArrowUpRight size={22} />
+              </div>
+            </div>
+
+            <div className="cf-floating-card cf-mini-card cf-mini-one">
+              <div className="cf-mini-icon"><Gift size={20} /></div>
+              <div>
+                <strong>Gift cards</strong>
+                <span>Buy · Sell · Exchange</span>
+              </div>
+            </div>
+
+            <div className="cf-floating-card cf-mini-card cf-mini-two">
+              <div className="cf-mini-icon"><Wallet size={20} /></div>
+              <div>
+                <strong>Digital wallet</strong>
+                <span>Manage your funds</span>
+              </div>
+            </div>
+
+            <div className="cf-floating-card cf-mini-card cf-mini-three">
+              <div className="cf-mini-icon"><Globe2 size={20} /></div>
+              <div>
+                <strong>Global services</strong>
+                <span>Explore more</span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className="section-padding how-section" id="how-it-works">
-          <div className="container">
-            <div className="section-heading">
-              <span className="eyebrow">GET STARTED</span>
-              <h2>Three steps. One smoother experience.</h2>
-              <p>Getting started with CARD FLUX is designed to be simple.</p>
+        <div className="cf-scroll-indicator">
+          <span />
+          SCROLL TO EXPLORE
+        </div>
+      </section>
+
+      <section className="cf-marquee" aria-label="CARD FLUX services">
+        <div className="cf-marquee-track">
+          {Array.from({ length: 2 }).map((_, index) => (
+            <div className="cf-marquee-group" key={index}>
+              <span>GIFT CARDS</span><Sparkles size={16} />
+              <span>DIGITAL WALLET</span><Sparkles size={16} />
+              <span>GLOBAL SERVICES</span><Sparkles size={16} />
+              <span>SMART EXCHANGE</span><Sparkles size={16} />
+              <span>WHERE GIFT CARDS MOVE</span><Sparkles size={16} />
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div className="steps-grid">
-              <div className="step-card">
-                <span className="step-number">01</span>
-                <h3>Create your account</h3>
-                <p>Register and securely access your personal account.</p>
-              </div>
-
-              <div className="step-card">
-                <span className="step-number">02</span>
-                <h3>Choose a service</h3>
-                <p>Explore available gift cards and digital services.</p>
-              </div>
-
-              <div className="step-card">
-                <span className="step-number">03</span>
-                <h3>Complete your transaction</h3>
-                <p>Follow the guided process and track your transaction.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="final-cta">
-          <div className="container final-cta-inner">
+      <section className="cf-section cf-services" id="services">
+        <div className="cf-container">
+          <div className="cf-section-heading">
             <div>
-              <span className="eyebrow">YOUR NEXT MOVE STARTS HERE</span>
-              <h2>Ready to move your digital value?</h2>
-              <p>Join CARD FLUX and discover a new way to exchange.</p>
+              <div className="cf-eyebrow">
+                <span className="cf-eyebrow-dot" />
+                THE CARD FLUX ECOSYSTEM
+              </div>
+              <h2 className="cf-section-title">
+                Everything digital.
+                <br />
+                <span>Connected in one place.</span>
+              </h2>
             </div>
 
-            <Link href="/register" className="primary-button">
-              Create Account <ArrowUpRight size={18} />
+            <p className="cf-section-description">
+              Discover a growing collection of digital products and services
+              designed to make your everyday transactions easier.
+            </p>
+          </div>
+
+          <div className="cf-service-grid">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+
+              return (
+                <Link
+                  href={service.href}
+                  className="cf-service-card cf-reveal"
+                  key={service.title}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="cf-service-card-top">
+                    <div className="cf-service-icon">
+                      <Icon size={25} />
+                    </div>
+                    <ArrowUpRight size={20} className="cf-service-arrow" />
+                  </div>
+
+                  <span className="cf-service-tag">{service.tag}</span>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <span className="cf-service-link">
+                    Explore service <ArrowRight size={16} />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="cf-section cf-about" id="about">
+        <div className="cf-container cf-about-grid">
+          <div className="cf-about-visual">
+            <div className="cf-about-circle cf-circle-one" />
+            <div className="cf-about-circle cf-circle-two" />
+
+            <div className="cf-about-panel">
+              <div className="cf-about-panel-top">
+                <span className="cf-brand-mark">CF</span>
+                <span>THE CARD FLUX EXPERIENCE</span>
+              </div>
+
+              <div className="cf-about-symbol">
+                <ArrowLeftRight size={65} strokeWidth={1.3} />
+              </div>
+
+              <h3>Where Gift Cards Move.</h3>
+              <p>Move value. Discover possibilities.</p>
+
+              <div className="cf-about-panel-bottom">
+                <span>BUILT FOR A DIGITAL WORLD</span>
+                <Sparkles size={18} />
+              </div>
+            </div>
+          </div>
+
+          <div className="cf-about-content">
+            <div className="cf-eyebrow">
+              <span className="cf-eyebrow-dot" />
+              WHY CARD FLUX
+            </div>
+
+            <h2 className="cf-section-title">
+              More than a marketplace.
+              <br />
+              <span>A smarter digital experience.</span>
+            </h2>
+
+            <p className="cf-section-description">
+              CARD FLUX brings multiple digital services together through
+              one simple experience. Our goal is to make accessing,
+              exchanging and managing digital value feel effortless.
+            </p>
+
+            <div className="cf-benefit-list">
+              {benefits.map((benefit) => {
+                const Icon = benefit.icon;
+
+                return (
+                  <div className="cf-benefit" key={benefit.title}>
+                    <div className="cf-benefit-icon">
+                      <Icon size={22} />
+                    </div>
+                    <div>
+                      <h3>{benefit.title}</h3>
+                      <p>{benefit.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <Link href="/register" className="cf-text-link">
+              Join CARD FLUX <ArrowUpRight size={18} />
             </Link>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <Link href="/" className="brand">
-            <span className="brand-mark">C</span>
-            <span>CARD <strong>FLUX</strong></span>
-          </Link>
+      <section className="cf-section cf-how" id="how-it-works">
+        <div className="cf-container">
+          <div className="cf-centered-heading">
+            <div className="cf-eyebrow">
+              <span className="cf-eyebrow-dot" />
+              GET STARTED
+            </div>
+            <h2 className="cf-section-title">
+              Simple steps.
+              <br />
+              <span>Seamless possibilities.</span>
+            </h2>
+            <p className="cf-section-description">
+              Getting started with CARD FLUX is designed to be straightforward.
+            </p>
+          </div>
 
-          <p>© {new Date().getFullYear()} CARD FLUX. All rights reserved.</p>
-
-          <div className="footer-support">
-            <Headphones size={17} />
-            <span>Support coming soon</span>
+          <div className="cf-steps-grid">
+            {steps.map((step, index) => (
+              <div className="cf-step-card cf-reveal" key={step.number}>
+                <span className="cf-step-number">{step.number}</span>
+                <div className="cf-step-line">
+                  <span />
+                </div>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+                {index !== 2 && (
+                  <ArrowRight className="cf-step-arrow" size={22} />
+                )}
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="container footer-bottom">
-          <span>BUY. SELL. EXCHANGE.</span>
-          <span>Where Gift Cards Move.</span>
+      <section className="cf-section cf-security">
+        <div className="cf-container cf-security-inner">
+          <div className="cf-security-icon">
+            <ShieldCheck size={38} />
+          </div>
+          <div>
+            <div className="cf-eyebrow">BUILT WITH CARE</div>
+            <h2>Your trust matters.</h2>
+            <p>
+              We are building CARD FLUX with security-conscious account
+              controls, responsible transaction handling and a focus on
+              protecting the customer experience.
+            </p>
+          </div>
+          <CheckCircle2 className="cf-security-check" size={32} />
+        </div>
+      </section>
+
+      <section className="cf-cta">
+        <div className="cf-cta-glow" />
+        <div className="cf-container cf-cta-content">
+          <div className="cf-eyebrow">
+            <Sparkles size={15} /> YOUR NEXT MOVE STARTS HERE
+          </div>
+          <h2>
+            Ready to move
+            <br />
+            <span>with CARD FLUX?</span>
+          </h2>
+          <p>
+            Create your account and discover a more connected digital
+            experience.
+          </p>
+          <Link href="/register" className="cf-button cf-button-primary">
+            Create your account <ArrowUpRight size={19} />
+          </Link>
+        </div>
+      </section>
+
+      <footer className="cf-footer">
+        <div className="cf-container">
+          <div className="cf-footer-main">
+            <div className="cf-footer-brand">
+              <Link href="/" className="cf-logo">
+                <span className="cf-brand-mark">CF</span>
+                <span>CARD <strong>FLUX</strong></span>
+              </Link>
+              <p>Where Gift Cards Move.</p>
+              <span className="cf-footer-note">
+                A connected world of digital possibilities.
+              </span>
+            </div>
+
+            <div className="cf-footer-column">
+              <h3>Explore</h3>
+              <Link href="#services">Services</Link>
+              <Link href="#about">About us</Link>
+              <Link href="#how-it-works">How it works</Link>
+            </div>
+
+            <div className="cf-footer-column">
+              <h3>Account</h3>
+              <Link href="/register">Create account</Link>
+              <Link href="/login">Sign in</Link>
+              <Link href="/dashboard">Dashboard</Link>
+            </div>
+
+            <div className="cf-footer-column">
+              <h3>Platform</h3>
+              <span>Gift cards</span>
+              <span>Digital wallet</span>
+              <span>Global services</span>
+            </div>
+          </div>
+
+          <div className="cf-footer-bottom">
+            <span>© {new Date().getFullYear()} CARD FLUX. All rights reserved.</span>
+            <span>WHERE GIFT CARDS MOVE.</span>
+          </div>
         </div>
       </footer>
-    </>
+    </main>
   );
 }
