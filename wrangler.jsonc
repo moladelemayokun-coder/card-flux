@@ -2,5 +2,18 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "card-flux",
-  "keep_vars": true
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-22",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "upload_source_maps": true,
+  "keep_vars": true,
+  "observability": {
+    "enabled": true
+  }
 }
