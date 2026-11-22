@@ -13,7 +13,7 @@ import {
   ChevronRight,
   Sparkles,
 } from "lucide-react";
-import LogoutButton from "@/components/logout-button";
+import { LogoutButton } from "@/components/logout-button";
 
 export default async function ProfilePage() {
   const supabase = await createClient();
