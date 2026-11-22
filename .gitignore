@@ -33,3 +33,5 @@ pnpm-debug.log*
 # Operating system
 .DS_Store
 Thumbs.db
+
+.open-next
