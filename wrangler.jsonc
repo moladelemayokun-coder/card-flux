@@ -5,14 +5,21 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-11-22",
   "compatibility_flags": [
-    "nodejs_compat"
+    "nodejs_compat",
+    "global_fetch_strictly_public"
   ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "upload_source_maps": true,
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "card-flux"
+    }
+  ],
   "keep_vars": true,
+  "upload_source_maps": true,
   "observability": {
     "enabled": true
   }
